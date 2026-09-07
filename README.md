@@ -25,3 +25,14 @@ To produce a production build:
 cd web
 npm run build
 ```
+
+## GitHub Pages
+
+The `main` branch is deployed automatically to
+https://lukehoban.github.io/buhtig/ after a successful GitHub Actions build. The
+workflow can also be started manually from the Actions tab. The Vite build uses
+the `/buhtig/` project base path and includes a fallback for client-side routes.
+
+Repository Pages settings may need one-time manual configuration: in **Settings
+> Pages**, select **GitHub Actions** as the source. No backend or authentication
+is included in this static deployment.
