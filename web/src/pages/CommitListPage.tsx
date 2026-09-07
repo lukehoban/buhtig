@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { findRepo } from "../fixtures/data";
 
 export function CommitListPage() {
@@ -12,8 +12,15 @@ export function CommitListPage() {
   return (
     <div className="page">
       <h1>
-        Commits · {repo.owner}/{repo.name}
+        {repo.owner}/{repo.name}
       </h1>
+      <nav className="repo-nav">
+        <NavLink to={`/${repo.owner}/${repo.id}`} end>
+          Code
+        </NavLink>
+        <NavLink to={`/${repo.owner}/${repo.id}/commits`}>Commits</NavLink>
+      </nav>
+      <h2>Commits</h2>
       <ul className="commit-list">
         {repo.commits.map((commit) => (
           <li key={commit.sha} className="commit-list-item">

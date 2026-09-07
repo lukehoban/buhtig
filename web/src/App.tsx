@@ -12,6 +12,9 @@ function App() {
     <div className="app">
       <header className="app-header">
         <Link to="/" className="app-title">
+          <span className="app-logo" aria-hidden="true">
+            b
+          </span>
           buhtig
         </Link>
       </header>
