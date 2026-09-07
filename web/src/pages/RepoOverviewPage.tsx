@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { findRepo } from "../fixtures/data";
 import { FileTree } from "../components/FileTree";
 
@@ -17,8 +17,10 @@ export function RepoOverviewPage() {
       </h1>
       <p className="repo-description">{repo.description}</p>
       <nav className="repo-nav">
-        <Link to={`/${repo.owner}/${repo.id}`}>Code</Link>
-        <Link to={`/${repo.owner}/${repo.id}/commits`}>Commits</Link>
+        <NavLink to={`/${repo.owner}/${repo.id}`} end>
+          Code
+        </NavLink>
+        <NavLink to={`/${repo.owner}/${repo.id}/commits`}>Commits</NavLink>
       </nav>
       <h2>Files</h2>
       <FileTree repo={repo} nodes={repo.tree} basePath="" />
