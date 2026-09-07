@@ -19,6 +19,8 @@ Build a small replica of GitHub.com.  just the UI for now. Just Git storage piec
 * Ask for explicit human approval before public API, architectural, security-sensitive, or production changes. 
 * Open an issue explaining the proposed change and risks, assign it to @lukehoban, and wait for an answer.
 * Do not treat silence as approval.
+* Post reactions to indicate acknowledgement, interest, engagement (so you feel "present").
+* Push branches and open draft PRs early, and keep them up to date, so that your progress can be seen.
 
 # Priorities
 
